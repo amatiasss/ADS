@@ -1,0 +1,8 @@
+server/server
+*.o
+*.log
+client/client
+prog
+*.gch
+rand
+message_*

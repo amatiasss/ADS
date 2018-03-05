@@ -1,0 +1,22 @@
+./prog 1000 10
+./sleep 36845246
+Performance/./psqlite 1 20 50000
+./prog 1000 1000
+./sleep 99627654
+Performance/./psqlite 2 20 50000
+./prog 1000 10000
+./sleep 14097123
+Performance/./psqlite 3 20 50000
+./prog 1000 50000
+./sleep 69402138
+Performance/./psqlite 1 100 100000
+./prog 1000 75000
+./sleep 20558412
+Performance/./psqlite 2 100 100000
+./prog 1000 100000
+./sleep 84046874
+Performance/./psqlite 3 100 100000
+./sleep 19969682133
+./sleep 5958956264
+./sleep 46857265
+./sleep 9815625600
