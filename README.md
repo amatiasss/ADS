@@ -35,9 +35,9 @@ $ make
 Lembrando que para o sistema funcionar corretamente serão necessários um servidor e, pelo menos,
 um cliente.
 
-## Running the tests
+## Executando
 
-Executando o servidor
+Primeiro, executo o servidor
 
 ```
 $ ./server {arquivo_de_entrada} {número_de_clientes} {opcional}
@@ -51,7 +51,7 @@ Por exemplo, para executar com 3 clientes com o tempo de resposta em nanosegundo
 $ ./server input.txt 3 y
 ```
 
-Para executar um número_de_clientes
+Depois deve-se executar os clientes na quantidade informada ao servidor
 
 ```
 $ ./client {ip_do_servidor} {ip_local}
@@ -63,12 +63,20 @@ como
 $ ./client 10.85.97.223 10.85.97.18
 ```
 
-### Resultados
+### Arquivo de Entrada e Resultados
 
-Cada linha no arquivo de entrada representa um mensagem que comandará uma ação no
-sistema do cliente, para cada uma destas mensagens será gerado um arquivo da saída
-informando os tempos de serviço e de utilização de todos os clientes. Os arquivos
-são salvos na pasta 'result'.
+O arquivo de entrada é um arquivo texto contendo chamadas de execução de programas
+
+```
+./prog 100 1000
+./sleep  2309423
+...
+```
+
+Cada linha representa uma mensagem que comandará uma ação no sistema do cliente,
+para cada uma destas mensagens será gerado um arquivo da saída informando os tempos
+de serviço e de utilização de todos os clientes. Os arquivos são salvos na pasta
+'result'.
 
 ```
 IP    TS    TU
