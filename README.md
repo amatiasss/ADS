@@ -92,8 +92,20 @@ IP    TS    TU
 Em construção
 ```
 
-## Executando teste em Containers
+## Executando testes em Containers
+
+Os testes em Containers serão feitos através do ![LXD](https://linuxcontainers.org/lxd/introduction/). Para iniciar o procedimento faremos a instalação e a configuração padrão da aplicação, como segue:
+
+Instalação para Ubuntu 16.04 LTS, caso sua distribuição seja diferente consulte o ![guia de instalação](https://linuxcontainers.org/lxd/getting-started-cli/).
 
 ```
-Em construção
+$ sudo apt install lxd lxd-client -y
 ```
+
+Re-abra a sessão de usuário e, para iniciar a configuração, digite:
+
+```
+$ sudo lxd init
+```
+
+Proceda com a configuração padrão do LXD. Caso ocorra algum erro de "lxg group"
