@@ -5,4 +5,4 @@ client/client
 prog
 *.gch
 rand
-message_*
+result/message_*
