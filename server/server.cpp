@@ -22,6 +22,8 @@ Server::Server(const string& input, const int nClients, const bool nnsec):
   it = messages.begin();
   //inicializa o mensageiro
   waiter = new Messenger();
+  //cria a pasta resultado
+  system("mkdir result");
 }
 
 Server::~Server(){
