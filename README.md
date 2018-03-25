@@ -100,9 +100,9 @@ Re-abra a sessão de usuário e, para iniciar a configuração, digite:
 $ sudo lxd init
 ```
 
-Proceda com a configuração padrão do LXD(Digite Enter para tudas as opções). Caso ocorra algum erro de "lxg group" ou utilize sudo para executar.
+Proceda com a configuração padrão do LXD(Digite Enter para todas as opções). Caso ocorra algum erro de "lxd group" ou utilize sudo para executar.
 
-Para instalar o nosso primeiro container como servidor 'server' com o exeutamos o seguinte comando:
+Para instalar o nosso primeiro container como servidor 'server' executamos o seguinte comando:
 
 ```
 $ lxc launch ubuntu:16.04 server
@@ -113,7 +113,7 @@ Para entrar no container server faça:
 $ lxc exec server -- /bin/bash
 ```
 
-A partir deste ponto você estará dentro de uma máquina virtual linux. Execute os seguintes comandos para atualizar o SO e instalar aplicações nescessárias e, sair do contaiter.
+A partir deste ponto você estará dentro de uma máquina virtual linux. Execute os seguintes comandos para atualizar o SO e instalar aplicações necessárias e, sair do container.
 
 ```
 # apt-get update
@@ -122,7 +122,7 @@ A partir deste ponto você estará dentro de uma máquina virtual linux. Execute
 # exit
 ```
 
-Agora, com tudo configurado, clonaremos o server em quantas maquinas clintes forem necessárias para a execução dos testes. Para isso criaremos primeiro uma cópia do server e depois
+Agora, com tudo configurado, clonaremos o server em quantas maquinas clientes forem necessárias para a execução dos testes. Para isso criaremos primeiro uma cópia do server e depois
 a transformaremos em uma imagem que pode ser usada para criar os clientes:
 
 ```
@@ -138,12 +138,12 @@ $ lxc launch img-server client-2
 $ lxc launch img-server client-N
 ```
 
-Vizualide com list:
+Visualize com list:
 
 ```
 $ lxc list
 ```
-Utilize o list também para vizualizar o IP de cada container. Isto será exencial para a próxima etapa.
+Utilize o list também para visualizar o IP de cada container. Isto será essencial para a próxima etapa.
 
 ```
 IP server:   10.17.116.137
