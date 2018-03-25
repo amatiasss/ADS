@@ -3,6 +3,9 @@
 #include <iostream>     // std::cout
 #include <fstream>      // std::ifstream
 #include <iomanip>      // std::setprecision
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 using namespace std;
 
 Server::Server(const string& input, const int nClients, const bool nnsec):
@@ -23,7 +26,9 @@ Server::Server(const string& input, const int nClients, const bool nnsec):
   //inicializa o mensageiro
   waiter = new Messenger();
   //cria a pasta resultado
-  system("mkdir result");
+  struct stat sb;
+  stat("result", &sb);
+  if(!S_ISDIR(sb.st_mode)) system("mkdir result"); //se não existir pasta result cria-se-a
 }
 
 Server::~Server(){

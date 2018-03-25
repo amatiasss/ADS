@@ -15,7 +15,7 @@ int main(int argc, char **argv){
     string input(argv[1]);
     printf("%s\n", "Instanciando o servidor");
     Server serv(input, atoi(argv[2]), argc == 4);
-    printf("%s\n", "Servidor arguardando conexão de clientes");
+    printf("%s\n", "Servidor aguardando conexão de clientes");
     serv.init();
     printf("%s\n", "Iniciando envio das mensagens");
     serv.run();
